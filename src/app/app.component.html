@@ -1,0 +1,17 @@
+<h2>Historique des employés</h2>
+<ul class="list-group">
+  <app-livre *ngFor="let livre of livres" [livreName]="livre.nom" [auteurName]="livre.auteur" [price]="livre.prix"></app-livre>
+</ul>
+
+<h2>Nouvel employé</h2>
+
+<p>Veuillez saisir votre nom</p>
+<input type="text" [(ngModel)]="nom">
+
+<p>Veuillez saisir votre statut</p>
+<input type="text" [(ngModel)]="auteur">
+
+<p>Veuillez saisir votre salaire</p>
+<input type="number" [(ngModel)]="prix"><br><br>
+
+<button class="btn btn-primary" (click)="ajouter()">Ajouter</button>
